@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rm -rf /home/ubuntu/helloApp
+rm -rf /home/ubuntu/helloApp/gradle
