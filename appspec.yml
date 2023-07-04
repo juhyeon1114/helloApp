@@ -8,13 +8,15 @@ files:
 
 permissions:
   - object: /
-    owner: root
-    group: root
+    owner: ubuntu
+    group: ubuntu
 
 hooks:
   AfterInstall:
     - location: scripts/stop.sh
       timeout: 60
+      runas: root
   ApplicationStart:
     - location: scripts/start.sh
       timeout: 60
+      runas: root
