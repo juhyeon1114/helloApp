@@ -8,13 +8,10 @@ files:
 
 permissions:
   - object: /
-    owner: ubuntu
-    group: ubuntu
+    owner: root
+    group: root
 
 hooks:
-  BeforeInstall:
-    - location: scripts/refresh.sh
-      timeout: 60
   AfterInstall:
     - location: scripts/stop.sh
       timeout: 60
