@@ -37,7 +37,7 @@ jobs:
     - name: 프로젝트 빌드
       run: ./gradlew build -x test --info
     - name: S3에 업로드
-      run: aws deploy push --application-name ${{ env.AWS_CODE_DEPLOY_APPLICATION }} --ignore-hidden-files --s3-location s3://$AWS_S3_BUCKET/ena-be/${{ github.ref_name }}/$GITHUB_SHA.zip --source .
+      run: aws deploy push --application-name ${{ env.AWS_CODE_DEPLOY_APPLICATION }} --ignore-hidden-files --s3-location s3://$AWS_S3_BUCKET/hello-app/application.zip --source .
     - name: 배포
       run: |
         aws deploy create-deployment \
